@@ -1,0 +1,10 @@
+*.pyc
+*~
+.DS_Store
+*.db
+*.swp
+tmp
+.idea
+*.ini
+.env
+.foreman
