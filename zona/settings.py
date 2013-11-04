@@ -8,16 +8,15 @@ from unipath import Path
 PROJECT_DIR = Path(__file__).parent
 
 
+#config = Config(PROJECT_DIR.child('settings.ini'))
+
 # Workaround to use heroku while decouple doesn't support it.
-#def config(param, default=None, cast=lambda v: v):
-#    value = os.environ.get(param, default)
-#    return cast(value)
-
-config = Config(PROJECT_DIR.child('settings.ini'))
+def config(param, default=None, cast=lambda v: v):
+    value = os.environ.get(param, default)
+    return cast(value)
 
 
-#DEBUG = os.environ.get('DEBUG', '') == 'True'
-DEBUG = config('DEBUG', default=False, cast=bool)
+DEBUG = os.environ.get('DEBUG', '') == 'True'
 TEMPLATE_DEBUG = DEBUG
 
 ADMINS = (
