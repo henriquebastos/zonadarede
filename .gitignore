@@ -11,7 +11,9 @@ build
 eggs
 parts
 bin
+include
 var
+share
 sdist
 develop-eggs
 .installed.cfg
@@ -42,3 +44,4 @@ nosetests.xml
 *.ini
 .env
 .foreman
+venv/.Python
