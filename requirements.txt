@@ -1,4 +1,4 @@
-Django==1.5.5
+Django==1.6
 Unipath==1.0
 distribute==0.6.34
 dj-database-url==0.2.2
